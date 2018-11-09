@@ -1,0 +1,53 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  background: #000;
+}
+
+html,
+svg path {
+  transition: background-color 1s ease-in-out, fill 1s ease-in-out;
+}
+
+body {
+  min-height: 100%;
+}
+
+h1 {
+  font: bold 1.5rem/1 Courier;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  margin-top: 60px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+html.loaded h1 {
+  opacity: 1;
+}
+
+#scroller {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  padding: 0;
+  margin-left: -24px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.hide-text {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
