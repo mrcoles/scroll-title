@@ -104,8 +104,7 @@ const Scroll = (function() {
       self.stop();
       _timeout = window.setInterval(() => {
         if (self._atBottom()) {
-          window.scrollTo(0, 0);
-          self.stop();
+          window.scrollTo(0, window.innerHeight);
         } else {
           window.scrollBy(0, window.innerHeight);
         }
