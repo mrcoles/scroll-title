@@ -103,11 +103,22 @@ const Scroll = (function() {
     start: () => {
       self.stop();
       _timeout = window.setInterval(() => {
-        window.scrollBy(0, window.innerHeight);
+        if (self._atBottom()) {
+          window.scrollTo(0, 0);
+          self.stop();
+        } else {
+          window.scrollBy(0, window.innerHeight);
+        }
       }, 450);
     },
     stop: () => {
       window.clearInterval(_timeout);
+    },
+    _atBottom: () => {
+      return (
+        document.documentElement.scrollTop + window.innerHeight >=
+        document.body.offsetHeight
+      );
     }
   };
   return self;
