@@ -16,16 +16,17 @@ svg path {
 
 body {
   min-height: 100%;
+  padding: 0 15px;
 }
 
 h1 {
-  font: bold 1.5rem/1 Courier;
+  font: bold 1.5rem/1.25 Courier, monospace;
   color: #fff;
-  width: 100%;
   text-align: center;
   margin-top: 60px;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  white-space: pre-line;
 }
 
 html.loaded h1 {
@@ -34,10 +35,11 @@ html.loaded h1 {
 
 #scroller {
   position: fixed;
-  bottom: 20px;
-  left: 50%;
-  padding: 0;
-  margin-left: -24px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
   border: 0;
   outline: 0;
   background: transparent;
